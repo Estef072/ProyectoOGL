@@ -73,6 +73,12 @@ while isRunning:
     opcionM4s3=  keys[K_v] and keys[K_3]
     opcionM4s4=  keys[K_v] and keys[K_4]
     
+    ##MODEL 5
+    opcionM5s1=  keys[K_c] and keys[K_1]
+    opcionM5s2=  keys[K_c] and keys[K_2]
+    opcionM5s3=  keys[K_c] and keys[K_3]
+    opcionM5s4=  keys[K_c] and keys[K_4]
+
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -142,7 +148,7 @@ while isRunning:
         face.scale.y = 3
         face.scale.z = 5
         rend.scene.append( face )
-
+        
     elif opcionM1s2:
         rend.scene.clear()
         face = Model("cala.obj", "cala.bmp")
@@ -244,13 +250,36 @@ while isRunning:
     ##MODEL 4
     elif opcionM4s1:
         rend.scene.clear()
-        face = Model("ghost.obj", "ghost.bmp")
-        face.position.z -= 5
-        face.scale.x = 12
-        face.scale.y = 12
-        face.scale.z = 12
+        face = Model("Ghost.obj", "ghost.bmp")
+        face.position.z -=6
+        face.scale.x = .021111
+        face.scale.y = .021111
+        face.scale.z = .021111
         rend.scene.append( face )
-
+    elif opcionM4s2:
+        rend.scene.clear()
+        face = Model("Ghost.obj", "ghost.bmp")
+        face.position.z -=6
+        face.scale.x = .021111
+        face.scale.y = .021111
+        face.scale.z = .021111
+        rend.scene.append( face )
+    elif opcionM4s3:
+        rend.scene.clear()
+        face = Model("Ghost.obj", "ghost.bmp")
+        face.position.z -=6
+        face.scale.x = .021111
+        face.scale.y = .021111
+        face.scale.z = .021111
+        rend.scene.append( face )
+    elif opcionM4s4:
+        rend.scene.clear()
+        face = Model("Ghost.obj", "ghost.bmp")
+        face.position.z -=6
+        face.scale.x = .021111
+        face.scale.y = .021111
+        face.scale.z = .021111
+        rend.scene.append( face )
 
     deltaTime = clock.tick(60) / 1000
     
