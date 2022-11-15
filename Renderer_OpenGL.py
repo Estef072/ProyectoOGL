@@ -180,7 +180,7 @@ while isRunning:
         face = Model("spider.obj", "spider.bmp")
         face.position.z -= .8
         face.scale.x = .0009
-        face.scale.y = .009
+        face.scale.y = .0009
         face.scale.z = .0009
         rend.scene.append( face )
     
@@ -189,7 +189,7 @@ while isRunning:
         face = Model("spider.obj", "spider.bmp")
         face.position.z -= .8
         face.scale.x = .0009
-        face.scale.y = .009
+        face.scale.y = .0009
         face.scale.z = .0009
         rend.scene.append( face )
     elif opcionM2s3:
@@ -197,7 +197,7 @@ while isRunning:
         face = Model("spider.obj", "spider.bmp")
         face.position.z -= .8
         face.scale.x = .0009
-        face.scale.y = .009
+        face.scale.y = .0009
         face.scale.z = .0009
         rend.scene.append( face )
     
@@ -206,7 +206,7 @@ while isRunning:
         face = Model("spider.obj", "spider.bmp")
         face.position.z -= .8
         face.scale.x = .0009
-        face.scale.y = .009
+        face.scale.y = .0009
         face.scale.z = .0009
         rend.scene.append( face )
 
@@ -251,34 +251,70 @@ while isRunning:
     elif opcionM4s1:
         rend.scene.clear()
         face = Model("Ghost.obj", "ghost.bmp")
-        face.position.z -=6
-        face.scale.x = .021111
-        face.scale.y = .021111
-        face.scale.z = .021111
+        face.position.z -=10
+        face.scale.x = .0355555
+        face.scale.y = .0355555
+        face.scale.z = .0355555
         rend.scene.append( face )
     elif opcionM4s2:
         rend.scene.clear()
         face = Model("Ghost.obj", "ghost.bmp")
-        face.position.z -=6
-        face.scale.x = .021111
-        face.scale.y = .021111
-        face.scale.z = .021111
+        face.position.z -=10
+        face.scale.x = .0355555
+        face.scale.y = .0355555
+        face.scale.z = .0355555
         rend.scene.append( face )
     elif opcionM4s3:
         rend.scene.clear()
         face = Model("Ghost.obj", "ghost.bmp")
-        face.position.z -=6
-        face.scale.x = .021111
-        face.scale.y = .021111
-        face.scale.z = .021111
+        face.position.z -=10
+        face.scale.x = .0355555
+        face.scale.y = .0355555
+        face.scale.z = .0355555
         rend.scene.append( face )
     elif opcionM4s4:
         rend.scene.clear()
         face = Model("Ghost.obj", "ghost.bmp")
+        face.position.z -=10
+        face.scale.x = .0355555
+        face.scale.y = .0355555
+        face.scale.z = .0355555
+        rend.scene.append( face )
+
+      ##MODELO 5
+    elif opcionM5s1:
+        rend.scene.clear()
+        face = Model("Mask.obj", "poke.bmp")
         face.position.z -=6
-        face.scale.x = .021111
-        face.scale.y = .021111
-        face.scale.z = .021111
+        face.scale.x = 16
+        face.scale.y = 16
+        face.scale.z =16
+        rend.scene.append( face )
+    elif opcionM5s2:
+        rend.scene.clear()
+        face = Model("Mask.obj.obj", "poke.bmp")
+        face.position.z -=6
+        face.scale.x = 16
+        face.scale.y = 16
+        face.scale.z = 16
+        rend.scene.append( face )
+
+    elif opcionM5s3:
+        rend.scene.clear()
+        face = Model("Mask.obj.obj", "poke.bmp")
+        face.position.z -=6
+        face.scale.x = 16
+        face.scale.y = 16
+        face.scale.z = 16
+        rend.scene.append( face )
+
+    elif opcionM5s4:
+        rend.scene.clear()
+        face = Model("Mask.obj.obj", "poke.bmp")
+        face.position.z -=6
+        face.scale.x = 16
+        face.scale.y = 16
+        face.scale.z = 16
         rend.scene.append( face )
 
     deltaTime = clock.tick(60) / 1000

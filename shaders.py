@@ -118,8 +118,8 @@ uniform sampler2D tex;
 void main()
 {
     float intensity = dot(norms, normalize(pointLight -pos));
-    float r =  3.14 * 15;
-    float g = 3.14 * 10;
+    float r =  3.14 * 12;
+    float g = 3.14 * 8;
     float b = 1.0;
 
     fragColor = vec4(r, g, b, 1.0) * intensity;
