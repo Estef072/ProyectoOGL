@@ -15,8 +15,7 @@ pygame.init()
 screen = pygame.display.set_mode((width, height), pygame.OPENGL | pygame.DOUBLEBUF)
 clock = pygame.time.Clock()
 
-fondo = pygame.image.load("fondo.jpeg")
-screen.blit(fondo,(0,0))
+
 
 rend = Renderer(screen)
 
@@ -49,15 +48,30 @@ ladoy = 200
 while isRunning:
 
     keys = pygame.key.get_pressed()
-    ##Valores de los Keys para poder ver los modelos 
+    ##Valores de los Keys para poder ver los modelos
+    #  
     ##MODELO1
     opcionM1s1 = keys[K_m] and keys[K_1]
     opcionM1s2 = keys[K_m] and keys[K_2]
     opcionM1s3= keys[K_m] and keys[K_3]
     opcionM1s4= keys[K_m] and keys[K_4]
-
     ##MODELO 2
-    
+    opcionM2s1=  keys[K_n] and keys[K_1]
+    opcionM2s2=  keys[K_n] and keys[K_2]
+    opcionM2s3=  keys[K_n] and keys[K_3]
+    opcionM2s4=  keys[K_n] and keys[K_4]
+
+    ##MODEL 3   
+    opcionM3s1=  keys[K_b] and keys[K_1]
+    opcionM3s2=  keys[K_b] and keys[K_2]
+    opcionM3s3=  keys[K_b] and keys[K_3]
+    opcionM3s4=  keys[K_b] and keys[K_4]
+
+    ##MODEL 4
+    opcionM4s1=  keys[K_v] and keys[K_1]
+    opcionM4s2=  keys[K_v] and keys[K_2]
+    opcionM4s3=  keys[K_v] and keys[K_3]
+    opcionM4s4=  keys[K_v] and keys[K_4]
     
 
     for event in pygame.event.get():
@@ -119,12 +133,10 @@ while isRunning:
         rend.setShaders(vertex_shader,multicolor_shader)
   
     
-    
     ##MENU MODELO 1
     if opcionM1s1:
         rend.scene.clear()
         face = Model("cala.obj", "cala.bmp")
-
         face.position.z -= 5
         face.scale.x = 5
         face.scale.y = 3
@@ -134,12 +146,10 @@ while isRunning:
     elif opcionM1s2:
         rend.scene.clear()
         face = Model("cala.obj", "cala.bmp")
-
         face.position.z -= 5
         face.scale.x = 5
         face.scale.y = 3
         face.scale.z = 5
-
         rend.scene.append( face )
 
     elif opcionM1s3:
@@ -150,21 +160,100 @@ while isRunning:
         face.scale.y = 3
         face.scale.z = 5
         rend.scene.append( face )
-
     elif opcionM1s4:
         rend.scene.clear()
         face = Model("cala.obj", "cala.bmp")
-
         face.position.z -= 5
         face.scale.x = 5
         face.scale.y = 3
         face.scale.z = 5
-
+        rend.scene.append( face )
+    ##Menu Modelo2
+    elif opcionM2s1:
+        rend.scene.clear()
+        face = Model("spider.obj", "spider.bmp")
+        face.position.z -= .8
+        face.scale.x = .0009
+        face.scale.y = .009
+        face.scale.z = .0009
         rend.scene.append( face )
     
+    elif opcionM2s2:
+        rend.scene.clear()
+        face = Model("spider.obj", "spider.bmp")
+        face.position.z -= .8
+        face.scale.x = .0009
+        face.scale.y = .009
+        face.scale.z = .0009
+        rend.scene.append( face )
+    elif opcionM2s3:
+        rend.scene.clear()
+        face = Model("spider.obj", "spider.bmp")
+        face.position.z -= .8
+        face.scale.x = .0009
+        face.scale.y = .009
+        face.scale.z = .0009
+        rend.scene.append( face )
     
+    elif opcionM2s4:
+        rend.scene.clear()
+        face = Model("spider.obj", "spider.bmp")
+        face.position.z -= .8
+        face.scale.x = .0009
+        face.scale.y = .009
+        face.scale.z = .0009
+        rend.scene.append( face )
+
+    ##Menu Modelo3
+    elif opcionM3s1:
+        rend.scene.clear()
+        face = Model("skull.obj", "skull.bmp")
+        face.position.z -= 5
+        face.scale.x = 12
+        face.scale.y = 12
+        face.scale.z =12
+        rend.scene.append( face )
+
+    elif opcionM3s2:
+        rend.scene.clear()
+        face = Model("skull.obj", "skull.bmp")
+        face.position.z -= 5
+        face.scale.x = 12
+        face.scale.y = 12
+        face.scale.z = 12
+        rend.scene.append( face )
+
+    elif opcionM3s3:
+        rend.scene.clear()
+        face = Model("skull.obj", "skull.bmp")
+        face.position.z -= 5
+        face.scale.x =12
+        face.scale.y = 12
+        face.scale.z = 12
+        rend.scene.append( face )
+    elif opcionM3s4:
+        rend.scene.clear()
+        face = Model("skull.obj", "skull.bmp")
+        face.position.z -= 5
+        face.scale.x = 12
+        face.scale.y = 12
+        face.scale.z = 12
+        rend.scene.append( face )
+
+
+    ##MODEL 4
+    elif opcionM4s1:
+        rend.scene.clear()
+        face = Model("ghost.obj", "ghost.bmp")
+        face.position.z -= 5
+        face.scale.x = 12
+        face.scale.y = 12
+        face.scale.z = 12
+        rend.scene.append( face )
+
+
     deltaTime = clock.tick(60) / 1000
-    rend.time += deltaTime
+    
 
     rend.update()
     rend.render()
