@@ -102,7 +102,7 @@ void main()
 }
 '''
 
-multicolor_shader=  """
+gold_shader=  """
 #version 450
 
 out vec4 fragColor;

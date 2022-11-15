@@ -136,7 +136,7 @@ while isRunning:
         rend.setShaders(vertex_shader, electry_shader )
 
     elif keys[K_4]:
-        rend.setShaders(vertex_shader,multicolor_shader)
+        rend.setShaders(vertex_shader,gold_shader)
   
     
     ##MENU MODELO 1
