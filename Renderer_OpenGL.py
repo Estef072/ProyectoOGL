@@ -290,9 +290,10 @@ while isRunning:
         face.scale.y = 16
         face.scale.z =16
         rend.scene.append( face )
+
     elif opcionM5s2:
         rend.scene.clear()
-        face = Model("Mask.obj.obj", "poke.bmp")
+        face = Model("Mask.obj", "poke.bmp")
         face.position.z -=6
         face.scale.x = 16
         face.scale.y = 16
@@ -301,7 +302,7 @@ while isRunning:
 
     elif opcionM5s3:
         rend.scene.clear()
-        face = Model("Mask.obj.obj", "poke.bmp")
+        face = Model("Mask.obj", "poke.bmp")
         face.position.z -=6
         face.scale.x = 16
         face.scale.y = 16
@@ -310,7 +311,7 @@ while isRunning:
 
     elif opcionM5s4:
         rend.scene.clear()
-        face = Model("Mask.obj.obj", "poke.bmp")
+        face = Model("Mask.obj", "poke.bmp")
         face.position.z -=6
         face.scale.x = 16
         face.scale.y = 16
