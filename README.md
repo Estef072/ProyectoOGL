@@ -6,7 +6,8 @@
 2. Use**Right Arrow** ▶ para mover en el  eje y
 3. Use  **Up Arrow** para mover en el eje y
 4. Use **Down Arrow** to move the camera in the *Y* axis.
-3. Use **Right Shift** and **Right CTRL** to zoom in and out.
+5. Use z para hacer zoom 
+6. Use a para alejar
 4. Press **ESC** to exit.
 
 ## Shaders
